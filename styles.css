@@ -1,0 +1,757 @@
+/* BASE */
+body {
+  margin: 0;
+  font-family: 'Libre Baskerville', serif;
+  background-color: #f7f5f2;
+  color: #3a3a3a;
+  text-align: center;
+}
+
+/* FLORES SUAVES DE FONDO */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    url("assets/flores-top.png"),
+    url("assets/flores-bottom.png");
+  background-position:
+    top left,
+    bottom right;
+  background-repeat: no-repeat;
+  background-size: 340px, 340px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* OCULTO */
+.hidden {
+  display: none;
+}
+
+/* TEXTOS */
+.subtitle {
+  letter-spacing: 4px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  margin: 0;
+}
+
+.names span {
+  display: block;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 26px;
+  margin: 8px 0;
+}
+
+.date {
+  margin: 25px 0 35px;
+  letter-spacing: 2px;
+}
+
+/* SOBRE */
+.envelope {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.envelope img {
+  width: 240px;
+}
+
+.open-text {
+  margin-top: 12px;
+  font-size: 15px;
+  letter-spacing: 3px;
+  pointer-events: none;
+}
+
+/* ASIENTOS */
+.seats {
+  margin-top: 35px;
+  font-size: 14px;
+}
+
+.seats span {
+  display: inline-block;
+  font-size: 30px;
+  border: 1px solid #999;
+  border-radius: 8px;
+  padding: 6px 14px;
+  margin: 10px 0;
+}
+
+/* CONTENIDO */
+section {
+  padding: 80px 20px;
+}
+
+/* FOTO */
+.photo-section img {
+  width: 90%;
+  max-width: 460px;
+  border-radius: 22px;
+}
+
+/* EVENTOS */
+.event-section {
+  max-width: 520px;
+  margin: 0 auto 80px;
+}
+
+.event-section h4 {
+  letter-spacing: 3px;
+}
+
+.event-section h3 {
+  letter-spacing: 3px;
+  margin: 22px 0;
+}
+
+.place {
+  line-height: 1.7;
+}
+
+/* BOTONES */
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 30px;
+  background: #8fa6b8;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.btn.disabled {
+  background: #ccc;
+}
+
+/* TRANSICIÓN */
+.fade-out {
+  animation: fadeOut 0.6s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+/* ===== RSVP ELEGANTE AJUSTADO ===== */
+.rsvp {
+  padding: 70px 20px;
+}
+
+.rsvp-card {
+  max-width: 420px;              /* 🔽 más pequeño */
+  margin: 0 auto;
+  background: #f7f5f2;           /* 🎨 mismo fondo beige */
+  padding: 40px 30px 45px;       /* 🔽 menos padding */
+  border-radius: 16px;
+}
+
+/* TÍTULO */
+.rsvp h3 {
+  letter-spacing: 3px;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+/* TEXTO */
+.rsvp-text {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* CAMPOS */
+.field {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 12px 8px;
+  border: none;
+  border-bottom: 1px solid #999;
+  background: transparent;
+  font-family: 'Libre Baskerville', serif; /* 👈 MISMA FUENTE */
+  font-size: 13px;
+  outline: none;
+  color: #3a3a3a;
+}
+
+/* LABEL */
+.field label {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #666;
+  pointer-events: none;
+  transition: 0.3s ease;
+  font-family: 'Libre Baskerville', serif;
+}
+
+/* EFECTO FLOTANTE */
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label,
+.field select:focus + label,
+.field select:not([value=""]) + label {
+  top: -8px;
+  font-size: 10px;
+  color: #444;
+}
+
+/* BOTÓN */
+.rsvp-btn {
+  margin-top: 22px;
+  padding: 12px;
+  width: 100%;
+  background: #8fa6b8;          /* mismo tono que botones */
+  color: white;
+  border: none;
+  border-radius: 28px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-family: 'Libre Baskerville', serif;
+  cursor: pointer;
+}
+/* ======================================
+   DESVANECIDO ELEGANTE (PREMIUM)
+   Suave, limpio, sin deformar
+====================================== */
+
+.torn-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0,0,0,0.15) 4%,
+    black 12%,
+    black 88%,
+    rgba(0,0,0,0.15) 96%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0,0,0,0.15) 4%,
+    black 12%,
+    black 88%,
+    rgba(0,0,0,0.15) 96%,
+    transparent 100%
+  );
+
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.torn-wrapper {
+  max-width: 460px;   /* 👈 mismo tamaño de antes */
+  width: 90%;         /* 👈 mismo porcentaje */
+  margin: 0 auto;
+}
+
+.torn-wrapper img {
+  width: 100%;
+  height: auto;
+}
+/* ======================================
+   TEXTO INVITACIÓN (ESTILO IMPRESO)
+====================================== */
+
+.invitation-text {
+ margin-top: -50px;   /* 👈 súbelo hacia la foto */
+  padding-top: 0;
+}
+
+.intro-text {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.intro-small {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* CONTENEDOR */
+.invitation-names.diagonal {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  margin: 40px auto 24px; /* 👈 antes estaba en 10px */
+  text-align: center;
+}
+
+
+/* NOMBRES */
+.invitation-names .name {
+  display: block;
+  font-family: 'Great Vibes', cursive;
+  font-size: 46px;
+  line-height: 1.1;
+}
+
+/* JULIANA → IZQUIERDA */
+.invitation-names .juliana {
+  transform: translateX(-80px); /* 👈 AJUSTA AQUÍ */
+}
+
+/* & CENTRO */
+.invitation-names .amp {
+  display: block;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 22px;
+  margin: 6px 0;
+}
+
+/* JUAN → DERECHA */
+.invitation-names .juan {
+  transform: translateX(60px);  /* 👈 AJUSTA AQUÍ */
+}
+
+
+
+.invite-text {
+  font-size: 14px;
+  line-height: 1.8;
+}
+/* ===============================
+   CONTEO REGRESIVO
+================================ */
+
+.countdown {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.countdown-date {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.countdown-date strong {
+  font-size: 42px;
+  font-weight: 400;
+  color: #8fa6b8;
+}
+
+.faltan {
+  letter-spacing: 3px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+}
+
+.countdown-timer div {
+  text-align: center;
+}
+
+.countdown-timer span {
+  font-size: 32px;
+  color: #8fa6b8;
+}
+
+.countdown-timer small {
+  display: block;
+  font-size: 11px;
+  margin-top: 6px;
+  letter-spacing: 1px;
+}
+/* ===============================
+   COUNTDOWN ELEGANTE
+================================ */
+
+.countdown-section {
+  margin: 40px 0 70px;
+  text-align: center;
+}
+
+.countdown-title {
+  letter-spacing: 3px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 700; /* negrilla */
+
+}
+
+.countdown-time {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  font-weight: 800; /* negrilla */
+
+}
+
+.time-box {
+  text-align: center;
+  min-width: 70px;
+}
+
+.time-box span {
+  font-size: 42px;
+  color: #000; /* mismo azul elegante */
+  font-family: 'Libre Baskerville', serif;
+}
+
+.time-box small {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.colon {
+  font-size: 36px;
+  color: #000;
+  margin-bottom: 18px;
+}
+/* ===============================
+   FECHA FINAL – DEFINITIVA
+================================ */
+
+.date-final {
+  margin: 0 0 25px; /* más arriba, menos espacio */
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  color: #000;
+}
+
+/* MES ARRIBA */
+.date-final .month {
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 6px; /* 🔽 más pegado al 07 */
+}
+
+/* FILA PRINCIPAL */
+.date-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* BLOQUES LATERALES */
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* TEXTO LATERAL */
+.side .text {
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+/* RAYAS (solo para sábado y año) */
+.side .line {
+  width: 72px;
+  height: 0;
+  border-top: 1px solid #9BAE9A;
+}
+
+
+
+
+/* DÍA CENTRAL */
+.day {
+  font-size: 48px;
+  line-height: 1;
+}
+/* ======================================
+   SUBIR FECHA + COUNTDOWN (FIX DEFINITIVO)
+====================================== */
+
+/* FECHA */
+.date-final {
+  padding-top: 20px !important;   
+  margin-top: -60px;             
+}
+
+/* COUNTDOWN */
+.countdown-section {
+  color: #9BAE9A;
+  padding-top: 20px !important;   
+  margin-top: -70px;              
+}
+/* ======================================
+   PROTECCIÓN ICONOS CEREMONIA / RECEPCIÓN
+====================================== */
+
+.event-section {
+  padding-top: 0px !important;
+  margin-top: -80px !important;
+}
+
+/* iconos visibles y centrados */
+.event-section .icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+  display: block;
+}
+.dresscode-icon {
+  width: 64px;        /* 👈 tamaño ideal */
+  max-width: 64px;
+  margin: 16px auto 12px;
+  display: block;
+}
+
+.letter-icon {
+  width: 30px;        /* 👈 tamaño ideal */
+  max-width: 30px;
+  margin: 16px auto 12px;
+  display: block;
+}
+
+/* ===============================
+   AJUSTE PARA MÓVILES
+================================ */
+
+@media (max-width: 768px) {
+  .page-wrapper {
+    width: 100%;
+  }
+}
+
+/* ===============================
+   AJUSTE EXTRA PARA MÓVILES PEQUEÑOS
+================================ */
+
+@media (max-width: 420px) {
+  .page-wrapper {
+    width: 100%;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+/* ===============================
+   AJUSTE EL TEXTO CON LAS FLORES
+================================ */
+.jj-initials {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 6px;
+}
+
+
+/* ===============================
+   MARGEN ENTRE CONFIRMACION Y VESTIMENTA 
+================================ */
+.rsvp {
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+.rsvp-card {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.rsvp-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.rsvp-text {
+  margin-bottom: 10px;
+}
+/* ===============================
+ ESTILOS SUGERENCIA DE REGALOS
+================================ */
+.gifts {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.gifts-card {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.gift-icon {
+  width: 36px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.gifts-card h3 {
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.gifts-text {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.gifts-card h4 {
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.envelope-icon {
+  width: 26px;
+  color: #000;
+}
+/* ====================================
+   MARGEN ENTRE VESTIMENTA Y LLUVIA SOBRE 
+======================================= */
+.gifts {
+  margin-bottom: 20px;
+}
+.dresscode {
+  margin-top: -80px !important;
+}
+.dresscode .icon {
+  margin-bottom: 10px;
+}
+/* ==================================================
+   MARGEN ENTRE SUGERENCIA DE REGALOS HACIA RECEPCIÓN 
+===================================================== */
+.location {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.gifts {
+  margin-top: -120px !important;
+}
+/* ==================================================
+  COLOR BOTONES 
+===================================================== */
+.btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 26px;
+  background-color: #8FA68E; /* verde olivo claro */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #8FA68E; /* un poco más oscuro */
+  transform: translateY(-1px);
+}
+.rsvp-btn {
+  background-color: #8FA68E; /* verde olivo claro */
+  color: #ffffff;
+  border: none;
+}
+
+/* ==================================================
+  TAMANO FUENTE CORINTIOS 
+===================================================== */
+.verse {
+  font-size: 12px;
+  color: #000000;   /* negro */
+  display: block;
+  margin-top: 8px;
+}
+
+/* ==================================================
+  COLOR  J|J
+===================================================== */
+.jj-separator {
+  color: #8FA68E;
+  font-weight: 300;     
+  margin: 0 8px;        
+}
+/* ==================================================
+FOTO INTERMEDIA – MISMO ANCHOR, MÁS ALARGADA 
+FOTO INTERMEDIA – MÁS ALARGADA 
+===================================================== */
+.photo-wide img {
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 3 / 5;   /* 👈 MÁS ALARGADA */
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.photo-wide {
+  margin-top: -140px;   /* 👈 SUBE la foto */
+  margin-bottom: 40px;
+}
+/* ==================================================
+ SUBIR BLOQUE CEREMONIA HACIA LA FOTO
+===================================================== */
+/* SUBIR BLOQUE CEREMONIA HACIA LA FOTO */
+/* SUBIR BLOQUE DE ICONO (CEREMONIA / RECEPCIÓN) */
+.event-section {
+  padding-top: 0 !important;   /* 👈 mata el padding del section */
+  margin-top: -170px;          /* 👈 ahora SÍ se mueve */
+}
+/* SUBIR ICONO DE NOVIOS HACIA LA FOTO */
+.dresscode > .dresscode-icon {
+  margin-top: -60px;
+}
+/* SOLO SUBE EL ÍCONO DE REGALOS */
+.gifts .dresscode-icon {
+  margin-top: -60px;
+}
+/* HERO – CENTRADO VERTICAL */
+.hero {
+  position: relative;
+  top: -40px;   /* 👈 este es el punto exacto */
+}
+.hero {
+  position: relative;
+  top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
