@@ -239,6 +239,8 @@ section {
 .rsvp-btn:hover {
   transform: translateY(-1px);
 }
+
+
 /* ======================================
    DESVANECIDO ELEGANTE (PREMIUM)
    Suave, limpio, sin deformar
@@ -723,7 +725,7 @@ FOTO INTERMEDIA – MÁS ALARGADA
 }
 
 .photo-wide {
-  margin-top: -140px;   /* 👈 SUBE la foto */
+  margin-top: -70px;   /* 👈 SUBE la foto */
   margin-bottom: 40px;
 }
 /* ==================================================
@@ -733,11 +735,11 @@ FOTO INTERMEDIA – MÁS ALARGADA
 /* SUBIR BLOQUE DE ICONO (CEREMONIA / RECEPCIÓN) */
 .event-section {
   padding-top: 0 !important;   /* 👈 mata el padding del section */
-  margin-top: -170px;          /* 👈 ahora SÍ se mueve */
+  margin-top: -400px;          /* 👈 ahora SÍ se mueve */
 }
 /* SUBIR ICONO DE NOVIOS HACIA LA FOTO */
 .dresscode > .dresscode-icon {
-  margin-top: -60px;
+  margin-top: -130px;
 }
 /* SOLO SUBE EL ÍCONO DE REGALOS */
 .gifts .dresscode-icon {
@@ -752,16 +754,30 @@ FOTO INTERMEDIA – MÁS ALARGADA
   position: relative;
   top: 50px;
 }
+/* ===============================
+   TEXTO INTERMEDIO – CORRECTO
+================================ */
 
+.text-block {
+  padding: 0 20px;        /* margen lateral seguro */
+  margin: 20px auto 40px;
+}
 
+.text-block p {
+  max-width: 490px;       /* 👈 ESTA es la clave */
+  margin: 0 auto;
 
+  font-family: 'Libre Baskerville', serif;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #3a3a3a;
+}
+.text-block {
+  padding: 0 20px;
+  margin: -70px auto 20px;  /* 👈 sube el texto */
+}
 
-
-
-
-
-
-
-
-
-
+.photo-section {
+  margin-top: -80px;     /* separa de lo de arriba */
+  margin-bottom: 100px;  /* separa de lo de abajo */
+}
