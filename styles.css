@@ -218,17 +218,26 @@ section {
 
 /* BOTÓN */
 .rsvp-btn {
-  margin-top: 22px;
-  padding: 12px;
-  width: 100%;
-  background: #8fa6b8;          /* mismo tono que botones */
-  color: white;
-  border: none;
-  border-radius: 28px;
+  display: block;
+  max-width: 420px;
+  margin: 22px auto 0;
+
+  padding: 12px 26px;
+  background-color: #8FA68E;
+  color: #ffffff;
+  text-decoration: none;
+
+  border-radius: 30px;
   font-size: 13px;
   letter-spacing: 2px;
   font-family: 'Libre Baskerville', serif;
-  cursor: pointer;
+
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.rsvp-btn:hover {
+  transform: translateY(-1px);
 }
 /* ======================================
    DESVANECIDO ELEGANTE (PREMIUM)
@@ -743,6 +752,7 @@ FOTO INTERMEDIA – MÁS ALARGADA
   position: relative;
   top: 50px;
 }
+
 
 
 
