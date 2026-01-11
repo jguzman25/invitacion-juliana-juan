@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ===============================
      COUNTDOWN
   ================================ */
-  const weddingDate = new Date("February 7, 2026 18:30:00").getTime();
+  const weddingDate = new Date("February 7, 2026 15:30:00").getTime();
 
   setInterval(() => {
     const now = new Date().getTime();
@@ -48,3 +48,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 1000);
 
 });
+
